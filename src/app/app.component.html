@@ -10,6 +10,8 @@
       </ol>
     </div>
   </div>
-  <button class="btn btn-primary">Display Details</button>
-  <p>Secret Password = tuna</p>
+  <button class="btn btn-primary"
+  (click)="toggleDetails()">Display Details</button>
+  <p
+  [ngStyle]="{visibility:getIsDetailsVisible()}">Secret Password = tuna</p>
 </div>
