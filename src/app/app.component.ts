@@ -7,8 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isDetailsVisible = false;
+  logMessages = [];
   toggleDetails() {
     this.isDetailsVisible ? this.isDetailsVisible = false : this.isDetailsVisible = true;
+    this.createLogEntry();
+  }
+
+  createLogEntry() {
+    this.logMessages.push("Button clicked.")
   }
 
   getIsDetailsVisible() {
