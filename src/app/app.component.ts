@@ -3,7 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [`
+    .online {
+        color: white;
+    }
+  `]  
 })
 export class AppComponent {
   isDetailsVisible = false;
@@ -16,7 +20,14 @@ export class AppComponent {
 
   createLogEntry() {
     this.numberOfClicks++;
-    this.logMessages.push(this.numberOfClicks + ". Button clicked.")
+    let currentdate = new Date();
+    let datetime = currentdate.getDate() + "/"
+      + (currentdate.getMonth()+1)  + "/" 
+      + currentdate.getFullYear() + " @ "  
+      + currentdate.getHours() + ":"  
+      + currentdate.getMinutes() + ":" 
+      + currentdate.getSeconds();
+    this.logMessages.push(this.numberOfClicks + ". " + datetime + ": Button clicked.")
   }
 
   getIsDetailsVisible() {
