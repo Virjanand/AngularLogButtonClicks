@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styles: [`
-    .online {
+    .white_text {
         color: white;
     }
   `]  
@@ -28,6 +28,10 @@ export class AppComponent {
       + currentdate.getMinutes() + ":" 
       + currentdate.getSeconds();
     this.logMessages.push(this.numberOfClicks + ". " + datetime + ": Button clicked.")
+  }
+
+  isFifthLineOrHigher() {
+    return true;
   }
 
   getIsDetailsVisible() {

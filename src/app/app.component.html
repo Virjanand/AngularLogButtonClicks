@@ -17,7 +17,7 @@
   <ul>
     <li *ngFor="let message of logMessages"
     [ngStyle]="{backgroundColor: 'blue'}"
-    [ngClass]="{online:true}">
+    [ngClass]="{white_text:isFifthLineOrHigher()}">
       {{ message }}
     </li>
   </ul>
