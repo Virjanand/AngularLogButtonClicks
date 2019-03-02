@@ -15,10 +15,12 @@
   <p
   [ngStyle]="{visibility:getIsDetailsVisible()}">Secret Password = tuna</p>
   <ul>
-    <li *ngFor="let message of logMessages"
-    [ngStyle]="{backgroundColor: 'blue'}"
-    [ngClass]="{white_text:isFifthLineOrHigher()}">
-      {{ message }}
+    <li *ngFor="let message of logMessages; let i = index"
+        [ngClass]="{ white_text: i == 5 }">
+      <p
+      > 
+        {{ message }}
+      </p>
     </li>
   </ul>
 </div>

@@ -6,6 +6,9 @@ import { Component } from '@angular/core';
   styles: [`
     .white_text {
         color: white;
+    },
+    .black_text {
+      color: black;
     }
   `]  
 })
@@ -31,7 +34,7 @@ export class AppComponent {
   }
 
   isFifthLineOrHigher() {
-    return true;
+    return this.numberOfClicks >= 5 ? true : false;
   }
 
   getIsDetailsVisible() {
