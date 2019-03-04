@@ -16,7 +16,8 @@
   [ngStyle]="{visibility:getIsDetailsVisible()}">Secret Password = tuna</p>
   <ul>
     <li *ngFor="let message of logMessages; let i = index"
-        [ngClass]="{ white_text: i == 5 }">
+        [ngClass]="{ white_text: changeStyle(i)}"
+        [ngStyle]="{backgroundColor:getColor(i)}">
       <p
       > 
         {{ message }}

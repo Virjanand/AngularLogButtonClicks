@@ -6,9 +6,6 @@ import { Component } from '@angular/core';
   styles: [`
     .white_text {
         color: white;
-    },
-    .black_text {
-      color: black;
     }
   `]  
 })
@@ -33,8 +30,12 @@ export class AppComponent {
     this.logMessages.push(this.numberOfClicks + ". " + datetime + ": Button clicked.")
   }
 
-  isFifthLineOrHigher() {
-    return this.numberOfClicks >= 5 ? true : false;
+  changeStyle(rowNumber) {
+    return rowNumber >= 4 ? true : false;
+  }
+
+  getColor(rowNumber) {
+    this.changeStyle(rowNumber) ? 'blue' : 'white';
   }
 
   getIsDetailsVisible() {
