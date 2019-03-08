@@ -13,6 +13,7 @@ export class AppComponent {
   isDetailsVisible = false;
   logMessages = [];
   numberOfClicks = 0;
+  
   toggleDetails() {
     this.isDetailsVisible ? this.isDetailsVisible = false : this.isDetailsVisible = true;
     this.createLogEntry();
@@ -35,7 +36,7 @@ export class AppComponent {
   }
 
   getColor(rowNumber) {
-    this.changeStyle(rowNumber) ? 'blue' : 'white';
+    return this.changeStyle(rowNumber) ? 'blue' : 'white';
   }
 
   getIsDetailsVisible() {
